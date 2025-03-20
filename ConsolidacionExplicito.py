@@ -75,6 +75,7 @@ for t in tiempos:
         resultados_teoricos[f"T = {unidad_tiempo} {t} "].append(Ue[i])
 
 df_resultados_teoricos = pd.DataFrame(resultados_teoricos, index=z)
+df_resultados_teoricos = df_resultados_teoricos.round(2)
 
 # CÁLCULOS PARA EL MÉTODO EXPLÍCITO
 num_puntos = len(z)
@@ -91,6 +92,7 @@ U_explicito = calcular_presion_poros_explicito(U_explicito, k, num_puntos, num_a
 
 df_resultados_explicitos = pd.DataFrame(U_explicito, columns=[f"Año {i+1}" for i in range(num_anos)],
                                         index=[f"{i-1}" for i in range(1, num_puntos + 1)])
+df_resultados_explicitos = df_resultados_explicitos.round(2)
 # TABLAS DE RESULTADOS
 with col2:
     st.header("Resultados - Teórico")
