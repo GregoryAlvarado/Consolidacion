@@ -90,7 +90,7 @@ k = Cv * 1 / (1**2)  # Se simplifica a dt=1 y dz=1 (Puede adaptarse mediante inp
 # Método explícito
 U_explicito = calcular_presion_poros_explicito(U_explicito, k, num_puntos, num_anos)
 
-df_resultados_explicitos = pd.DataFrame(U_explicito, columns=[f"Año {i+1}" for i in range(num_anos)],
+df_resultados_explicitos = pd.DataFrame(U_explicito, columns=[f"{unidad_tiempo} {i+1}" for i in range(num_anos)],
                                         index=[f"{i-1}" for i in range(1, num_puntos + 1)])
 df_resultados_explicitos = df_resultados_explicitos.round(2)
 # TABLAS DE RESULTADOS
