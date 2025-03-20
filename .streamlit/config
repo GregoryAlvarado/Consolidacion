@@ -1,0 +1,7 @@
+[theme]
+base="light"
+font="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap"
+primaryColor="#F39C12"
+backgroundColor="#FFFFFF"
+secondaryBackgroundColor="#F0F0F0"
+textColor="#000000"
