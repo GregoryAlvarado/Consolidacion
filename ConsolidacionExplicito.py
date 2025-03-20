@@ -129,11 +129,3 @@ with col3:
     ax.legend(loc="center left", bbox_to_anchor=(1, 0.5))
     
     st.pyplot(fig, use_container_width=True)
-
-# TABLAS DE RESULTADOS
-with col2:
-    st.header("Resultados - Teórico")
-    st.dataframe(df_resultados_teoricos)
-
-    st.header("Resultados - Método Explícito")
-    st.dataframe(df_resultados_explicitos)
