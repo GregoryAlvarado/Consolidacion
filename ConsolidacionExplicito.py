@@ -63,7 +63,7 @@ z_Hdr = z / Hdr
 tiempos = np.arange(1, t_max + 1, 1) 
 
 # CÁLCULOS PARA EL MÉTODO TEÓRICO
-resultados_teoricos = {f"T = {unidad_tiempo} {t} ": [] for t in tiempos}
+resultados_teoricos = {f"{unidad_tiempo} {t} ": [] for t in tiempos}
 
 for t in tiempos:
     Tv = calcular_Tv(Cv, t, Hdr)
@@ -72,7 +72,7 @@ for t in tiempos:
     
     # Resultados de Ue para cada profundidad
     for i, profundidad in enumerate(z):
-        resultados_teoricos[f"T = {unidad_tiempo} {t} "].append(Ue[i])
+        resultados_teoricos[f"{unidad_tiempo} {t} "].append(Ue[i])
 
 df_resultados_teoricos = pd.DataFrame(resultados_teoricos, index=z)
 df_resultados_teoricos = df_resultados_teoricos.round(2)
