@@ -38,7 +38,7 @@ with col1:
     Cv = st.number_input(f"Coeficiente de consolidación Cv (m²/{unidad_tiempo.lower()})", min_value=0.001, value=0.45, step=0.1)
     H = st.number_input("Altura del estrato (m)", min_value=0.1, value=6.0, step=0.1)
     t_max = st.number_input(f"Tiempo ({unidad_tiempo.lower()}s)", min_value=1, value=6, step=1)
-    U0 = st.number_input("Carga (kPa/m²)", min_value=0.1, value=100.0, step=1.0)
+    U0 = st.number_input("Carga (kPa)", min_value=0.1, value=100.0, step=1.0)
 
     st.markdown("""**Nota:** El valor de Cv debe ser menor a 0.5 para evitar inestabilidades numéricas.""")
 
